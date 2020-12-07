@@ -1,0 +1,109 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+	outline: none!important;
+}
+iframe, object, embed {
+	border: none;
+	width: 100%;
+}
+textarea, input {-webkit-appearance: none;}
+img {image-orientation: from-image;}
+html, body {
+	max-width: 100%;
+	position: relative;
+	font-family: 'Manrope', sans-serif;
+	margin: 0;
+}
+a, a:hover, a:focus {
+	color: inherit;
+	@include anim(all .25s ease-out);
+	text-decoration: none;
+}
+button, button:hover {
+	@include anim(all .25s ease-out);
+	outline: none;
+}
+.main-container {
+	width: 100%;
+}
+.btn {
+	border: none;
+}
+.btn:focus {
+	box-shadow: none;
+}
+p {
+	margin: 0;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+picture {display: block;}
+svg {
+	display: block;
+	width: 100%;
+}
+.overflow {
+	overflow: hidden;
+}
+.main-wrapper {
+	overflow-x: hidden;
+}
+.btn-white {
+	background: $white;
+	color: #030303;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 8px 13px 8px 16px;
+	@include flexbox;
+	@include align(center);
+	&:hover {
+		background-color: $mainBorderColor;
+		color: $white;
+		.arrow-black {
+			fill: $white;
+		}
+	}
+	.arrow-black {
+		width: 24px;
+		height: 15px;
+		margin: 0 0 0 15px;
+		fill: #030303;
+		@include anim(all .25s ease-out);
+	}
+}
+// tab
+.nav-tabs {
+	@include flexbox;
+	@include flex-wrap(wrap);
+	.nav-link {
+		border: 1px solid $mainBorderColor;
+		background-color: transparent;
+		font: 500 18px/36px Manrope, sans-serif;
+		color: $white;
+		cursor: pointer;
+		padding: 1px 16px;
+		margin: 0 -1px -1px 0;
+		display: block;
+		@include anim(all .25s ease-out);
+	}
+	.nav-item {
+		&.is-active,
+		&:hover {
+			.nav-link {
+				color: $mainColor;
+				background-color: $mainBorderColor;
+			}
+		}
+	}
+}
+.tab-content {
+	.tab-pane {
+		display: none;
+		&.is-active {
+			display: block;
+		}
+	}
+}

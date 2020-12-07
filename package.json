@@ -1,0 +1,29 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "Ready workspace for frontend for many tasks. JS: clean unnecessary js for bootstrap.js, concatenation all js files into one minified files; css: clean unnecessary css, compilation scss to css, concatenation all css files into one minified files, extracts & inlines critical (above-the-fold) CSS to html; images: image optimization",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "2.18.13",
+    "critical": "0.9.1",
+    "del": "3.0.0",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "4.0.0",
+    "gulp-cache": "1.0.1",
+    "gulp-changed": "3.1.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-concat": "2.6.1",
+    "gulp-if": "2.0.2",
+    "gulp-imagemin": "4.0.0",
+    "imagemin-jpeg-recompress": "5.1.0",
+    "gulp-purifycss": "0.2.0",
+    "gulp-sass": "3.1.0",
+    "gulp-sourcemaps": "2.6.1",
+    "gulp-uglify": "3.0.0",
+    "gulp-useref": "3.1.5",
+    "run-sequence": "2.2.0",
+    "gulp-webp": "2.3.0",
+    "jquery": "3.3.1",
+    "swiper": "4.3.3"
+  }
+}

@@ -1,0 +1,133 @@
+.section-jury {
+    background-color: $mainColor;
+	position: relative;
+	margin-bottom: 50px;
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		left: 0;
+		margin: auto;
+		width: 100%;
+		z-index: 2;
+	}
+    &:before {
+		background: url('../images/jury-divider.svg') 50% no-repeat;
+		top: -29px;
+		height: 30px;
+	}
+	&:after {
+		background: url('../images/jury-divider-down.svg') 50% no-repeat;
+		bottom: -10px;
+		height: 30px;
+	}
+    .jury-holder {
+		padding: 85px 60px 100px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1440px;
+		@media (max-width: 767px) {
+			padding: 50px 30px 70px;
+		}
+		@media (max-width: 544px) {
+			padding: 50px 0 70px;
+		}
+	}
+	.title-section {
+		font: 700 50px/1.25 Manrope,sans-serif;
+		color: $white;
+		margin: 0 0 27px;
+		@media (max-width: 544px) {
+			font-size: 40px;
+			padding: 0 15px;
+		}
+	}
+	.tab-nav-holder {
+		@include flexbox;
+		@include flex-wrap(wrap);
+		@include align(center);
+		@include spaceBetween();
+		margin: 0 0 20px;
+		@media (max-width: 1120px) {
+			.nav-tabs {
+				width: 100%;
+				@include flexOrder(2);
+			}
+			.btn {
+				margin: 0 0 20px;
+				@include flexOrder(1);
+			}
+		}
+		@media (max-width: 544px) {
+			padding: 0 15px;
+		}
+	}
+    .jury-content {
+		@include flexbox;
+		@include flex-wrap(wrap);
+		&:hover {
+			.jury-item:not(:hover) {
+				opacity: .5;
+			}
+		}
+    }
+    .jury-item {
+		position: relative;
+		cursor: pointer;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		max-width: 132px;
+		max-height: 132px;
+		@include anim(all .25s ease-out);
+		@media (max-width: 544px) {
+			max-width: 25%;
+		}
+		&:hover {
+			z-index: 1;
+    		overflow: visible;
+		}
+		img {
+			width: 100%;
+		}
+		.jury-info {
+			position: absolute;
+			top: 100%;
+			right: auto;
+			bottom: auto;
+			left: 0;
+			margin: auto;
+			font: 500 16px/18px Manrope,sans-serif;
+			display: none;
+			background-color: $white;
+			padding: 0 20px 20px;
+			color: $black;
+			flex-direction: column;
+			@include flex-wrap(wrap);
+			cursor: auto;
+			.jury-name {
+				font: 500 24px/24px Manrope,sans-serif;
+				color: $mainLightColor;
+				padding: 20px 0 18px;
+			}
+			.jury-label {
+				white-space: nowrap;
+			}
+		}
+		&:hover {
+			overflow: visible;
+			z-index: 4;
+			.jury-info {
+				@include flexbox;
+			}
+		}
+    }
+    .img-ico {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 40px;
+		width: 40px;
+    }
+}

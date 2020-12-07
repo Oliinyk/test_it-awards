@@ -1,0 +1,16 @@
+// fonts
+@import "base/fonts";
+
+// variables
+@import "base/variables";
+
+// mixins
+@import "base/mixins";
+
+//components
+@import "components/header",
+        "components/hero",
+        "components/jury";
+
+// common styles
+@import "base/common";
